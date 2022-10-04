@@ -3,7 +3,7 @@ language: javascript
 services:
   - docker
 
-script:
+before_install:
   # Assuming the .travis.yml file is in the project directory, and there is a separate sub-directory for each service
   # Use either `docker-compose` or individual `docker build` commands
   # Build
@@ -26,3 +26,6 @@ script:
   - docker push bbamii/udagram-api-user:v1
   - docker push bbamii/udagram-frontend:v1
   - docker push bbamii/udagram-reverseproxy:v1
+
+script:
+  - echo "hey"
