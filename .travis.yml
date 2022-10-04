@@ -11,19 +11,19 @@ before_install:
   # Do similar for other three images
 
   # Tagging
-  - docker tag udagram-api-feed bbamii/udagram-api-feed:v1
-  - docker tag udagram-api-user bbamii/udagram-api-user:v1
-  - docker tag udagram-frontend bbamii/udagram-frontend:v1
-  - docker tag udagram-reverseproxy bbamii/udagram-reverseproxy:v1
+  - docker tag udagram-api-feed bbamii/udagram-api-feed:v3
+  - docker tag udagram-api-user bbamii/udagram-api-user:v3
+  - docker tag udagram-frontend bbamii/udagram-frontend:v3
+  - docker tag udagram-reverseproxy bbamii/udagram-reverseproxy:v3
   # Do similar for other three images
 
   # Push
   # Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push bbamii/udagram-api-feed:v1
-  - docker push bbamii/udagram-api-user:v1
-  - docker push bbamii/udagram-frontend:v1
-  - docker push bbamii/udagram-reverseproxy:v1
+  - docker push bbamii/udagram-api-feed:v3
+  - docker push bbamii/udagram-api-user:v3
+  - docker push bbamii/udagram-frontend:v3
+  - docker push bbamii/udagram-reverseproxy:v3
 
 script:
   - echo "hey!"
